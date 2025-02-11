@@ -1,7 +1,7 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-def imgWritter (name,code):
+def img_writer (name,code):
     with Image.open('suricatoinicial.jpg') as img:
         draw = ImageDraw.Draw(img)
         new_font = ImageFont.truetype("arial.ttf", 25)
