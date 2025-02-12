@@ -7,11 +7,11 @@ from credentials import sender_email, password
 
 def email_sender(email):
     msg = MIMEMultipart()
-    msg['from'] = 'Suricato'
+    msg['from'] = 'Suricatos'
     msg['to'] = email
     msg['subject'] = 'Ingresso do Suricato!'
 
-    email_body = MIMEText("Aqui está seu ingresso para a nossa festa! Nos vemos na toca!")
+    email_body = MIMEText("Aqui está seu ingresso para a nossa festa! \nSalve a imagem e/ou guarde este email para apresentar na entrada do evento! \nNos vemos na nossa toca!")
     msg.attach(email_body)
 
     with open('suricatoFinal.png', 'rb') as img:
@@ -25,3 +25,5 @@ def email_sender(email):
         smtp.send_message(msg)
 
         print('Mail Delivered!')
+
+email_sender('bibs879@gmail.com')
