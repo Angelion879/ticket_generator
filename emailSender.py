@@ -14,9 +14,9 @@ def email_sender(email):
     email_body = MIMEText("Aqui está seu ingresso para a nossa festa! \nSalve a imagem e/ou guarde este email para apresentar na entrada do evento! \nNos vemos na nossa toca!")
     msg.attach(email_body)
 
-    with open('suricatoFinal.png', 'rb') as img:
+    with open('passaporte.png', 'rb') as img:
         img_data = img.read()
-        image = MIMEImage(img_data, name="Suringresso")
+        image = MIMEImage(img_data, name="Passaporte_Suricatos")
         msg.attach(image)
 
     with smtplib.SMTP_SSL(host='smtp.gmail.com', port=465) as smtp:
